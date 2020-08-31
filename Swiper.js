@@ -360,6 +360,7 @@ class Swiper extends Component {
 
   resetTopCard = (cb) => {
     Animated.spring(this.state.pan, {
+      useNativeDriver: false,
       toValue: 0,
       friction: this.props.topCardResetAnimationFriction,
       tension: this.props.topCardResetAnimationTension,
